@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-      Сборка начата 19.11.2023 12:40:47.
+      Сборка начата 19.11.2023 15:55:54.
       
       Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\3.27.2-msvc1\\CompilerIdC\\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.36
+      Прошло времени 00:00:00.38
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-      Сборка начата 19.11.2023 12:40:48.
+      Сборка начата 19.11.2023 15:55:55.
       
       Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\3.27.2-msvc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.37
+      Прошло времени 00:00:00.38
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-ooapz5"
-      binary: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-ooapz5"
+      source: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-4b0agv"
+      binary: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-4b0agv"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-ooapz5'
+        Change Dir: 'C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-4b0agv'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ae3f0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0a275.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-        Сборка начата 19.11.2023 12:40:48.
+        Сборка начата 19.11.2023 15:55:55.
         
-        Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-ooapz5\\cmTC_ae3f0.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-4b0agv\\cmTC_0a275.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_ae3f0.dir\\Debug\\".
+          Создание каталога "cmTC_0a275.dir\\Debug\\".
           Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-          Создание каталога "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-ooapz5\\Debug\\".
-          Создание каталога "cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.tlog\\".
+          Создание каталога "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-4b0agv\\Debug\\".
+          Создание каталога "cmTC_0a275.dir\\Debug\\cmTC_0a275.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.tlog\\unsuccessfulbuild".
+          Создание "cmTC_0a275.dir\\Debug\\cmTC_0a275.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_0a275.dir\\Debug\\cmTC_0a275.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ae3f0.dir\\Debug\\\\" /Fd"cmTC_ae3f0.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a275.dir\\Debug\\\\" /Fd"cmTC_0a275.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.38.33130 для x64
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ae3f0.dir\\Debug\\\\" /Fd"cmTC_ae3f0.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a275.dir\\Debug\\\\" /Fd"cmTC_0a275.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-ooapz5\\Debug\\cmTC_ae3f0.exe" /INCREMENTAL /ILK:"cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-ooapz5/Debug/cmTC_ae3f0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-ooapz5/Debug/cmTC_ae3f0.lib" /MACHINE:X64  /machine:x64 cmTC_ae3f0.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_ae3f0.vcxproj -> C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-ooapz5\\Debug\\cmTC_ae3f0.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-4b0agv\\Debug\\cmTC_0a275.exe" /INCREMENTAL /ILK:"cmTC_0a275.dir\\Debug\\cmTC_0a275.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-4b0agv/Debug/cmTC_0a275.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-4b0agv/Debug/cmTC_0a275.lib" /MACHINE:X64  /machine:x64 cmTC_0a275.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_0a275.vcxproj -> C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-4b0agv\\Debug\\cmTC_0a275.exe
         FinalizeBuildStatus:
-          Файл "cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_ae3f0.dir\\Debug\\cmTC_ae3f0.tlog\\cmTC_ae3f0.lastbuildstate".
-        Сборка проекта "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-ooapz5\\cmTC_ae3f0.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_0a275.dir\\Debug\\cmTC_0a275.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_0a275.dir\\Debug\\cmTC_0a275.tlog\\cmTC_0a275.lastbuildstate".
+        Сборка проекта "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-4b0agv\\cmTC_0a275.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
             Ошибок: 0
         
-        Прошло времени 00:00:00.36
+        Прошло времени 00:00:00.37
         
       exitCode: 0
   -
@@ -182,8 +182,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-dro6g6"
-      binary: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-dro6g6"
+      source: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-mlnvhe"
+      binary: "C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-mlnvhe"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -192,34 +192,34 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-dro6g6'
+        Change Dir: 'C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-mlnvhe'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_baa06.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_86434.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-        Сборка начата 19.11.2023 12:40:49.
+        Сборка начата 19.11.2023 15:55:56.
         
-        Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-dro6g6\\cmTC_baa06.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-mlnvhe\\cmTC_86434.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_baa06.dir\\Debug\\".
+          Создание каталога "cmTC_86434.dir\\Debug\\".
           Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-          Создание каталога "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-dro6g6\\Debug\\".
-          Создание каталога "cmTC_baa06.dir\\Debug\\cmTC_baa06.tlog\\".
+          Создание каталога "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-mlnvhe\\Debug\\".
+          Создание каталога "cmTC_86434.dir\\Debug\\cmTC_86434.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_baa06.dir\\Debug\\cmTC_baa06.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_baa06.dir\\Debug\\cmTC_baa06.tlog\\unsuccessfulbuild".
+          Создание "cmTC_86434.dir\\Debug\\cmTC_86434.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_86434.dir\\Debug\\cmTC_86434.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_baa06.dir\\Debug\\\\" /Fd"cmTC_baa06.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_86434.dir\\Debug\\\\" /Fd"cmTC_86434.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.38.33130 для x64
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_baa06.dir\\Debug\\\\" /Fd"cmTC_baa06.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_86434.dir\\Debug\\\\" /Fd"cmTC_86434.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-dro6g6\\Debug\\cmTC_baa06.exe" /INCREMENTAL /ILK:"cmTC_baa06.dir\\Debug\\cmTC_baa06.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-dro6g6/Debug/cmTC_baa06.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-dro6g6/Debug/cmTC_baa06.lib" /MACHINE:X64  /machine:x64 cmTC_baa06.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_baa06.vcxproj -> C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-dro6g6\\Debug\\cmTC_baa06.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-mlnvhe\\Debug\\cmTC_86434.exe" /INCREMENTAL /ILK:"cmTC_86434.dir\\Debug\\cmTC_86434.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-mlnvhe/Debug/cmTC_86434.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/etreh/Documents/Programming/Otus/C++_Developer_2023_06/Basic/lesson_14/otus_cpp_basic_hw6/cmake_build/CMakeFiles/CMakeScratch/TryCompile-mlnvhe/Debug/cmTC_86434.lib" /MACHINE:X64  /machine:x64 cmTC_86434.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_86434.vcxproj -> C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-mlnvhe\\Debug\\cmTC_86434.exe
         FinalizeBuildStatus:
-          Файл "cmTC_baa06.dir\\Debug\\cmTC_baa06.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_baa06.dir\\Debug\\cmTC_baa06.tlog\\cmTC_baa06.lastbuildstate".
-        Сборка проекта "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-dro6g6\\cmTC_baa06.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_86434.dir\\Debug\\cmTC_86434.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_86434.dir\\Debug\\cmTC_86434.tlog\\cmTC_86434.lastbuildstate".
+        Сборка проекта "C:\\Users\\etreh\\Documents\\Programming\\Otus\\C++_Developer_2023_06\\Basic\\lesson_14\\otus_cpp_basic_hw6\\cmake_build\\CMakeFiles\\CMakeScratch\\TryCompile-mlnvhe\\cmTC_86434.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0

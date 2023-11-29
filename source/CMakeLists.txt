@@ -4,7 +4,7 @@ project(containers)
 
 add_executable(containers 
 	main.cpp		main.h
-	u_vector.cpp		u_vector.h
+	u_vector.ipp		u_vector.h
 	u_list.cpp		u_list.h
 	u_forward_list.cpp	u_forward_list.h
 )

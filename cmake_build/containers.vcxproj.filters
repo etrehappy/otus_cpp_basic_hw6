@@ -4,9 +4,6 @@
     <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_vector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,5 +35,10 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{DE425FF3-74AF-3762-8CC5-770CC2770A96}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\source\u_vector.ipp">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
