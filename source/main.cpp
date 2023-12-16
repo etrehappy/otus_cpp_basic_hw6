@@ -31,25 +31,22 @@ void check_u_vector()
     vec.erase(5);
 
     std::cout << "\n 5. Из контейнера удалены 3, 5 и 7 элементы.";
-    print(6, vec);
-
+    print(6, vec);    
 
     vec.insert(1, 10);
 
     std::cout << "\n 7. Добавлен элемент 10 в начало контейнера.";
-    print(8, vec);
+    print(8, vec);    
 
     vec.insert(5, 20);
 
     std::cout << "\n 9. Добавлен элемент 20 в середину контейнера.";
     print(10, vec);
 
-    vec.push_back(30);
+    vec.push_back(30); // !!! insert
 
     std::cout << "\n 11. Добавлен элемент 30 в конец контейнера.";
-    print(12, vec);
-
-    //vec.~u_vector();
+    print(12, vec);    
 }
 
 void check_u_forward_list()

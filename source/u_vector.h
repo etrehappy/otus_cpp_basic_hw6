@@ -11,7 +11,6 @@ public:
 
     void push_back(T value);
     int size() const;
-    int size_memory() const;
     void erase(int pos);
     void insert(const int pos, const T& value);
 
@@ -22,10 +21,15 @@ public:
 
 private:
     
-    void new_container(const int new_size, const int max_size);
-    
+    void double_capacity(); //extra 1
+    void new_container(const int old_size);
+    void fill(int index, const T& value);
+    void fill(const int new_pos, const int new_size, const T& value, T* ptr_old); 
+    void permutation(const int new_pos, const int new_size);
+
     int m_arr_size;
     T *m_arr;
+    int m_capacity;
 };
 
 #include "u_vector.ipp"
