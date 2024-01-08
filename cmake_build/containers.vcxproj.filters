@@ -4,10 +4,10 @@
     <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_list.cpp">
+    <ClCompile Include="..\source\u_forward_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_forward_list.cpp">
+    <ClCompile Include="..\source\u_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -18,10 +18,10 @@
     <ClInclude Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_list.h">
+    <ClInclude Include="..\source\u_forward_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\etreh\Documents\Programming\Otus\C++_Developer_2023_06\Basic\lesson_14\otus_cpp_basic_hw6\source\u_forward_list.h">
+    <ClInclude Include="..\source\u_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
