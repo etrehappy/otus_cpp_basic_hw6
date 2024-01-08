@@ -4,7 +4,7 @@
 u_list::u_list()
     : m_arr_size(NULL), m_start_node(nullptr), m_end_node(nullptr)
 {  
-    std::cout << "\n 1. Cоздан объект НЕшаблонного класса u_list для хранения элементов типа int в контейнере спискового типа.";
+    std::cout << "\n 1. Cоздан объект класса u_list для хранения элементов типа int в контейнере типа «Двунаправленный список».";
 }
 
 u_list::Node::Node() 
@@ -27,7 +27,7 @@ u_list::~u_list()
     if (it == nullptr)
     {
         std::cout << "\nПервый элемент контейнера пустой.";
-        goto jmp;
+        return;
     }
 
     for (; it != nullptr; )
@@ -37,10 +37,8 @@ u_list::~u_list()
 
         delete it_del;
         it_del = nullptr;        
-    }
-
-    jmp:    ;
-    /*std::cout << "\nОбъект f_list удалён деструктором ~u_list()";*/
+    }    
+    /*std::cout << "\nОбъект list удалён деструктором ~u_list()";*/
 }
 
 
@@ -143,7 +141,6 @@ void u_list::insert(const int pos, const int value)
     }
 
     ++m_arr_size;
-    return;
 }
 
 
