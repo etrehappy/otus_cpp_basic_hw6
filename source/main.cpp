@@ -13,7 +13,7 @@ void print_move(T& container_moved, const int number, const std::string& name)
     std::cout << "\n-----------------------------------------------\n";
 }
 
-int middle_pos(int size)
+size_t middle_pos(size_t size)
 {
     return (size / 2) + 1;
 }
@@ -29,8 +29,7 @@ void check_container(T& container, const int size_container, const std::string& 
     std::cout << "\n 2. В контейнер "<< name << " добавлено " << size_container << " элементов.";
     print(container, 3, name);
     std::cout << "\n 4. Размер контейнера: " << container.size();
-    
-    
+        
     container.erase(3);
     container.erase(4);
     container.erase(5);
@@ -79,22 +78,48 @@ void check_move(u_vector<int>& vec, u_list<int>& list, u_forward_list& f_list)
     print_move(f_list_3,3, "f_list_3");
 }
 
-
+void getErrorMessage(Errors er)
+{
+	switch (er)
+	{
+	case Errors::NoError:
+		break;
+	case Errors::ErrorPosition:
+		std::cerr << "\nError: позиция для erase/input < 1 ИЛИ > max size";
+		break;
+	case Errors::EmptyContainer:
+		std::cerr << "\nError: Первый элемент контейнера пустой.";
+		break;
+    case Errors::OutOfBounds:
+        std::cerr << "\nError: выход за границы массива";
+        break;
+	default:
+		break;
+	}
+}
 
 int main() 
 {    
     std::locale::global(std::locale("en_US.utf8"));
     
-    u_vector<int> vector{};    
-    check_container<u_vector<int>>(vector, 10, "vector");   //базовое + доп. задание 1
-    
-    u_list<int> list{};                                                                      
-    check_container<u_list<int>>(list, 13, "list");         //базовое
+    try {
+       u_vector<int> vector{};
+        check_container<u_vector<int>>(vector, 10, "vector");   //базовое + доп. задание 1
 
-    u_forward_list f_list{};                                                            
-    check_container<u_forward_list>(f_list, 18, "f_list");  //доп. задание 2
-    
-    check_move(vector, list, f_list); //доп. задание 3
-    
+        u_list<int> list{};
+        check_container<u_list<int>>(list, 13, "list");         //базовое
+
+        u_forward_list f_list{};
+        check_container<u_forward_list>(f_list, 18, "f_list");  //доп. задание 2
+
+        check_move(vector, list, f_list); //доп. задание 3
+    }
+    catch (Errors er)
+    {
+        getErrorMessage(er);
+    }
+
+    //_CrtDumpMemoryLeaks(); — для проверки утечек памяти
+
     return 0;
 }

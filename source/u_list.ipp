@@ -11,12 +11,7 @@ u_list<T>::u_list()
 template<typename T>
 u_list<T>::u_list(u_list&& rhs) noexcept //доп. задание 3
 {
-    m_start_node = rhs.m_start_node;
-    m_end_node = rhs.m_end_node;
-    m_arr_size = rhs.m_arr_size;
-
-    rhs.m_start_node = rhs.m_end_node = nullptr;
-    rhs.m_arr_size = 0;
+    move_from(std::move(rhs));
 
     std::cout << "\n 1. Вызван конструктор перемещения u_list(u_list&& rhs)";
 }
@@ -27,12 +22,7 @@ u_list<T>& u_list<T>::operator=(u_list&& rhs) noexcept //доп. задание 
     if (&rhs == this)
         return *this;
 
-    m_start_node = rhs.m_start_node;
-    m_end_node = rhs.m_end_node;
-    m_arr_size = rhs.m_arr_size;
-
-    rhs.m_start_node = rhs.m_end_node = nullptr;
-    rhs.m_arr_size = 0;
+    move_from(std::move(rhs));
 
     std::cout << "\n 2. Вызван оператор присваивания перемещением operator=(u_list&& rhs)";
     return *this;
@@ -61,6 +51,12 @@ u_list<T>::Node::Node()
 {    
 }
 
+template<typename T>
+u_list<T>::Node::Node(int data)
+    : m_data(data), next(nullptr), prev(nullptr)
+{
+}
+
 
 //u_list's public и friend функции
 template<typename T>
@@ -68,16 +64,13 @@ void u_list<T>::push_back(const T& value)
 {
     ++m_arr_size;
 
-    Node* new_end_node = new Node{};
+    Node* new_end_node = new Node{ value };
 
     if (m_arr_size == 1)
-    {
         m_start_node = m_end_node = new_end_node;
-        m_start_node->m_data = value;
-    }
     else
     {        
-        new_end_node->m_data = value;
+       // new_end_node->m_data = value;
         new_end_node->prev = m_end_node;       
         m_end_node->next = new_end_node;       
         m_end_node = new_end_node;       
@@ -85,26 +78,23 @@ void u_list<T>::push_back(const T& value)
 }
 
 template<typename T>
-int u_list<T>::size() const
+size_t u_list<T>::size() const
 {
     return m_arr_size;
 }
 
 //@param element_pos > 0
 template<typename T>
-void u_list<T>::erase(const int element_pos)
+void u_list<T>::erase(const size_t element_pos)
 {
     //проверяем позицию
     if (element_pos <= 0 || element_pos > m_arr_size)
-    {
-        std::cout << "\nError: erase element_pos <= 0 OR > max";
-        exit(-1);
-    }
+        throw Errors::ErrorPosition;
 
     Node* erase_node = m_start_node;    
 
     //Поиск места для вставки
-    for (int count_pos = 1; count_pos != element_pos; ++count_pos)
+    for (size_t count_pos = 1; count_pos != element_pos; ++count_pos)
         erase_node = erase_node->next;
 
     //Меняем адреса для next и prev
@@ -123,17 +113,13 @@ void u_list<T>::erase(const int element_pos)
 
 //@param pos > 0
 template<typename T>
-void u_list<T>::insert(const int pos, const int value)
+void u_list<T>::insert(const size_t pos, const int value)
 {
     if (pos < 1 || pos > m_arr_size)
-    {
-        std::cout << "\nError. Pos <= 0 OR pos > max container's size = " << m_arr_size;
-        exit(1);
-    }
+        throw Errors::ErrorPosition;
 
     Node* old_node = m_start_node;
-    Node* new_node = new Node{};
-    new_node->m_data = value;
+    Node* new_node = new Node{ value };
    
     if (pos == 1) //вставка на первое место
     {
@@ -144,7 +130,7 @@ void u_list<T>::insert(const int pos, const int value)
     {
         //Поиск места для вставки
         old_node = m_start_node->next;
-        for (int count_pos = 2; count_pos != pos; ++count_pos) //старт со 2го нода       
+        for (size_t count_pos = 2; count_pos != pos; ++count_pos) //старт со 2го нода       
             old_node = old_node->next;        
 
         //Новый адрес для предыдущего нода
@@ -183,21 +169,28 @@ template<typename T>
 std::ostream& operator<<(std::ostream& out, u_list<T>& rhs)
 {   
     if (rhs.size() == 0)
-    {
-        out << "\nВектор не содержит элементов";
         return out;
-    }
 
-    auto lust = rhs.back();
+    auto last = rhs.back();
 
-    for(auto it = rhs.begin(); it != lust; ++it) //доп. задание 4  
+    for(auto it = rhs.begin(); it != last; ++it) //доп. задание 4  
         out << *it << ", ";
     
-    out << *lust;
+    out << *last;
    
     return out;
 }
 
+//u_list's private функции
+template<typename T>
+void u_list<T>::move_from(u_list<T>&& rhs) noexcept {
+    m_start_node = rhs.m_start_node;
+    m_end_node = rhs.m_end_node;
+    m_arr_size = rhs.m_arr_size;
+
+    rhs.m_start_node = rhs.m_end_node = nullptr;
+    rhs.m_arr_size = 0;
+}
 
 
 //===========================================================================================================
@@ -219,6 +212,12 @@ typename u_list<T>::iterator& u_list<T>::iterator::operator++()
 {
     m_iterator_ptr = m_iterator_ptr->next;
     return *this;
+}
+
+template<typename T>
+bool u_list<T>::iterator::operator!=(typename u_list<T>::iterator& rhs)
+{
+    return  m_iterator_ptr != rhs.m_iterator_ptr;
 }
 
 template<typename T>

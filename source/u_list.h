@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "my_exception.h"
 
 template<typename T>
 class u_list
@@ -13,9 +14,9 @@ public:
     virtual ~u_list();
 
     void push_back(const T& value);
-    int size() const;
-    void erase(const int element_pos);
-    void insert(const int pos, const int value);
+    size_t size() const;
+    void erase(const size_t element_pos);
+    void insert(const size_t pos, const int value);
     
     struct iterator;
     iterator begin();
@@ -25,10 +26,11 @@ public:
     friend std::ostream& operator<<(std::ostream& out, u_list& rhs);    
 
 private:
+    void move_from(u_list&& rhs) noexcept;
 
     struct Node;
 
-    int m_arr_size;
+    size_t m_arr_size;
     Node* m_start_node;    
     Node* m_end_node;
 };
@@ -41,9 +43,7 @@ public:
 
     int& operator*();
     iterator& operator++();
-    friend bool operator!=(iterator& lhs, iterator& rhs)    {
-            return lhs.m_iterator_ptr != rhs.m_iterator_ptr;
-    }
+    bool operator!=(iterator& rhs);
 
     int& get();
 
@@ -58,7 +58,8 @@ struct u_list<T>::Node
     Node* prev;
     int m_data;
 
-    Node();    
+    Node();
+    Node(int data);
     ~Node() = default;
 };
 

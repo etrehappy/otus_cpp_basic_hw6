@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "my_exception.h"
 
 template<typename T>
 class u_vector 
@@ -13,9 +14,9 @@ public:
     virtual ~u_vector();
 
     void push_back(const T& value);
-    int size() const;
-    void erase(const int element_pos);
-    void insert(const int pos, const T& value);
+    size_t size() const;
+    void erase(const size_t element_pos);
+    void insert(const size_t pos, const T& value);
 
     struct iterator;
     iterator begin();
@@ -27,15 +28,16 @@ public:
     friend std::ostream& operator<<(std::ostream& out, u_vector<T>& rhs);
 
 private:
-    
+    void move_from(u_vector&& rhs) noexcept;
+
     void double_capacity(); //доп. задание 1
-    void new_container(const int old_size);
-    void fill_new_arr(const int new_pos, const int new_size, const T& value, const T* ptr_old);
-    void permutation(const int new_pos, const int new_size);
+    void new_container(const size_t old_size);
+    void fill_new_arr(const size_t new_pos, const size_t new_size, const T& value, const T* ptr_old);
+    void permutation(const size_t new_pos, const size_t new_size);
         
-    int m_arr_size;
+    size_t m_arr_size;
     T *m_arr;
-    int m_capacity;
+    size_t m_capacity;
 };
 
 template<typename T>
@@ -45,10 +47,8 @@ public:
     iterator(T* p);
 
     T& operator*() const;
-    iterator& operator++();
-    friend bool operator!=(iterator& lhs, iterator& rhs) { 
-        return lhs.m_iterator_ptr != rhs.m_iterator_ptr;
-    }
+    iterator& operator++();   
+    bool operator!=(iterator& rhs);
 
     T& get() const;
 

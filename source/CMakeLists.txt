@@ -7,6 +7,8 @@ add_executable(containers
 	u_vector.ipp		u_vector.h
 	u_list.ipp			u_list.h
 	u_forward_list.cpp	u_forward_list.h
+	
+	my_exception.h
 )
 
 target_compile_options(containers PRIVATE

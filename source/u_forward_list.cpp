@@ -3,19 +3,14 @@
 //u_forward_list's конструкторы и деструктор
 
 u_forward_list::u_forward_list()
-    : m_arr_size(0), m_start_node(nullptr), m_lust_node(nullptr)
+    : m_arr_size(0), m_start_node(nullptr), m_last_node(nullptr)
 {
     std::cout << "\n 1. Cоздан объект класса u_forward_list для хранения элементов типа int в контейнере типа «Однонаправленный список».";
 }
 
 u_forward_list::u_forward_list(u_forward_list&& rhs) noexcept //доп. задание 3
 {
-    m_start_node = rhs.m_start_node;
-    m_lust_node = rhs.m_lust_node;
-    m_arr_size = rhs.m_arr_size;
-
-    rhs.m_start_node = rhs.m_lust_node = nullptr;
-    rhs.m_arr_size = 0;
+    move_from(std::move(rhs));
 
     std::cout << "\n 1. Вызван конструктор перемещения u_forward_list(u_forward_list&& rhs)";
 }
@@ -25,12 +20,7 @@ u_forward_list& u_forward_list::operator=(u_forward_list&& rhs) noexcept //до�
     if (&rhs == this)
         return *this;
 
-    m_start_node = rhs.m_start_node;
-    m_lust_node = rhs.m_lust_node;
-    m_arr_size = rhs.m_arr_size;
-
-    rhs.m_start_node = rhs.m_lust_node = nullptr;
-    rhs.m_arr_size = 0;
+    move_from(std::move(rhs));
 
     std::cout << "\n 2. Вызван оператор присваивания перемещением operator=(u_forward_list&& rhs)";
     return *this;
@@ -58,49 +48,47 @@ u_forward_list::Node::Node()
 {  
 }
 
+u_forward_list::Node::Node(int data)
+    : m_data(data), next(nullptr)
+{
+}
+
 
 //u_forward_list's public и friend функции
 void u_forward_list::push_back(const int value)
 {
     ++m_arr_size;
 
-    Node* new_node = new Node{};
-    new_node->m_data = value;
+    Node* new_node = new Node{ value };   
 
     if (m_arr_size == 1)   
         m_start_node = new_node;
     else      
-        m_lust_node->next = new_node;
+        m_last_node->next = new_node;
 
-    m_lust_node = new_node;
+    m_last_node = new_node;
 }
 
-int u_forward_list::size() const
+size_t u_forward_list::size() const
 {
     return m_arr_size;
 }
 
 //@param pos > 0
-void u_forward_list::erase(const int pos)
+void u_forward_list::erase(const size_t pos)
 {   
     //check pos
-    if (pos <= 0 || pos > m_arr_size)
-    {
-        std::cout << "\nError: erase pos <= 0 OR > max";
-        exit(-1);
-    }
+    if (pos < 1 || pos > m_arr_size)
+        throw Errors::ErrorPosition;    
 
     Node* erase_node = m_start_node;
     Node* node_prev = nullptr;
 
     if (erase_node == nullptr)
-    {
-        std::cout << "Первый элемент контейнера пустой.";
-        return;
-    }  
+        throw Errors::EmptyContainer;
 
     //Search container[pos]       
-    for (int count_pos = 1; count_pos != pos; ++count_pos)
+    for (size_t count_pos = 1; count_pos != pos; ++count_pos)
     {
         node_prev = erase_node;
         erase_node = erase_node->next;        
@@ -109,7 +97,7 @@ void u_forward_list::erase(const int pos)
     //Change memory address
     if (pos == 1)    
         m_start_node = m_start_node->next;    
-    else if (erase_node == nullptr) //check lust position
+    else if (erase_node == nullptr) //check last position
         node_prev->next = nullptr;
     else
         node_prev->next = erase_node->next;  
@@ -122,18 +110,14 @@ void u_forward_list::erase(const int pos)
 }
 
 //@param pos > 0
-void u_forward_list::insert(const int pos, const int value)
+void u_forward_list::insert(const size_t pos, const int value)
 {
     //проверяем позицию
     if (pos < 1 || pos > m_arr_size)
-    {
-        std::cout << "\nError. Pos <= 0 OR pos > max container's size = " << m_arr_size;
-        exit(1);
-    }
+        throw Errors::ErrorPosition;
 
     Node* old_node = m_start_node;
-    Node* new_node = new Node{};
-    new_node->m_data = value;    
+    Node* new_node = new Node{ value };       
 
     if (pos == 1) //вставка на первое место
     {
@@ -145,7 +129,7 @@ void u_forward_list::insert(const int pos, const int value)
     //Поиск места для вставки   
     Node* old_node_prev = nullptr;
     old_node = m_start_node->next;
-    for (int count_pos = 2; count_pos != pos; ++count_pos) //старт со второго нода
+    for (size_t count_pos = 2; count_pos != pos; ++count_pos) //старт со второго нода
     {
         old_node_prev = old_node;
         old_node = old_node->next;
@@ -171,34 +155,39 @@ typename u_forward_list::iterator u_forward_list::begin()
 
 typename u_forward_list::iterator u_forward_list::back()
 {
-    return iterator(m_lust_node);
+    return iterator(m_last_node);
 }
 
 typename u_forward_list::iterator u_forward_list::end()
 {    
-    return iterator(m_lust_node->next);
+    return iterator(m_last_node->next);
 }
 
 std::ostream& operator<<(std::ostream& out, u_forward_list& rhs)
 {
     if (rhs.size() == 0)
-    {
-        out << "\nВектор не содержит элементов";
         return out;
-    }
 
-    auto lust = rhs.back();
+    auto last = rhs.back();
 
-    for (auto it = rhs.begin(); it != lust; ++it) //доп. задание 4  
+    for (auto it = rhs.begin(); it != last; ++it) //доп. задание 4  
         out << *it << ", ";
 
-    out << *lust;
+    out << *last;
 
     return out;
 }
 
 
+//u_forward_list's private функции
+void u_forward_list::move_from(u_forward_list&& rhs) noexcept {
+    m_start_node = rhs.m_start_node;
+    m_last_node = rhs.m_last_node;
+    m_arr_size = rhs.m_arr_size;
 
+    rhs.m_start_node = rhs.m_last_node = nullptr;
+    rhs.m_arr_size = 0;
+}
 
 //===========================================================================================================
 //доп. задание 4   
@@ -219,9 +208,9 @@ typename u_forward_list::iterator& u_forward_list::iterator::operator++()
     return *this;
 }
 
-bool operator!=(typename u_forward_list::iterator& lhs, typename u_forward_list::iterator& rhs)
+bool u_forward_list::iterator::operator!=(typename u_forward_list::iterator& rhs)
 {
-    return lhs.m_iterator_ptr != rhs.m_iterator_ptr;
+    return m_iterator_ptr != rhs.m_iterator_ptr;
 }
 
 int& u_forward_list::iterator::get()
